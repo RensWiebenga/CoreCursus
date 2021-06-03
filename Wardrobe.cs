@@ -7,30 +7,6 @@ using System.Threading.Tasks;
 
 namespace WardrobeCursus
 {
-    class Wardrobe
-    {
-        public static bool _isDoorOpen;
-        public string Material { get; set; }
-        public int AmountDoors { get; set; }
-
-        public void OpenDoor ()
-        {
-
-            if (_isDoorOpen)
-            {
-                Console.WriteLine($"the door was already open and the Material is { Material }");
-            }
-            else
-            {
-                Console.WriteLine("I've opened the door");
-                _isDoorOpen = true;
-            }
-            
-            return;
-        }
-
-    }
-
     public class StaticWardrobe
     {
         public static bool _isDoorOpen;

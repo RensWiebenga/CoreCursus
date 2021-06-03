@@ -9,31 +9,13 @@ namespace WardrobeCursus
 {
     class Wardrobe
     {
-        public static bool _isDoorOpen;
         public string Material { get; set; }
         public int AmountDoors { get; set; }
-
-        public void OpenDoor ()
-        {
-
-            if (_isDoorOpen)
-            {
-                Console.WriteLine($"the door was already open and the Material is { Material }");
-            }
-            else
-            {
-                Console.WriteLine("I've opened the door");
-                _isDoorOpen = true;
-            }
-            
-            return;
-        }
-
     }
 
     public class StaticWardrobe
     {
-        public static bool _isDoorOpen;
+        public bool isLocked { get; set; }
         public string Material { get; set; }
         public int AmountDoors { get; set; }
 
@@ -51,32 +33,15 @@ namespace WardrobeCursus
             }
         }
 
-        public void OpenDoor()
+        public void OpenDoor(string name)
         {
-            if (_isDoorOpen)
-            {
-                Console.WriteLine($"the door was already open and the Material is { Material }");
-            }
-            else
-            {
-                Console.WriteLine("I've opened the door");
-                _isDoorOpen = true;
-            }
+            Console.WriteLine($"The door was opened by {name}");
             return;
         }
 
-        public void CloseDoor()
+        public void CloseDoor(string name)
         {
-            if (_isDoorOpen)
-            {
-                Console.WriteLine($"I've closed the door");
-                _isDoorOpen = false;
-            }
-            else
-            {
-                Console.WriteLine("It was already closed");
-                
-            }
+            Console.WriteLine($"The door was close by {name}");
             return;
         }
     }
